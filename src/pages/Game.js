@@ -7,8 +7,18 @@ class Game extends Component {
       textAlign: 'center'
     };
 
+    const itemStyle = {
+      margin: '2vw',
+      maxWidth: '45vw',
+      maxHeight: '25vh',
+    };
+    
     const imageStyle = {
-      width: '95%'
+      maxWidth: '100%',
+      maxHeight: '100%',
+      width: 'auto',
+      border: '1px solid black',
+      borderRadius: '10px'
     };
 
     return (
@@ -16,21 +26,21 @@ class Game extends Component {
         <h1>시작페이지</h1>
         <p>이미지</p>
         <Grid container justify="center">
-          <Grid item xs={6}>
+          <Grid item style={itemStyle}>
             <img src={process.env.PUBLIC_URL + '/images/test.png'} alt="test" style={imageStyle} />
           </Grid>
-          <Grid item xs={6}>
-            <img src={process.env.PUBLIC_URL + '/images/test.png'} alt="test" style={imageStyle} />
-          </Grid>
-        </Grid>
-        <Grid container justify="center">
-          <Grid item xs={6}>
-            <img src={process.env.PUBLIC_URL + '/images/test.png'} alt="test" style={imageStyle} />
-          </Grid>
-          <Grid item xs={6}>
-            <img src={process.env.PUBLIC_URL + '/images/test.png'} alt="test" style={imageStyle} />
+          <Grid item style={itemStyle}>
+            <img src={process.env.PUBLIC_URL + '/images/test2.jpg'} alt="test2" style={imageStyle} />
           </Grid>
         </Grid>
+        {/* <Grid container justify="center">
+          <Grid item xs={6}>
+            <img src={process.env.PUBLIC_URL + '/images/test.png'} alt="test" style={imageStyle} />
+          </Grid>
+          <Grid item xs={6}>
+            <img src={process.env.PUBLIC_URL + '/images/test.png'} alt="test" style={imageStyle} />
+          </Grid>
+        </Grid> */}
       </div>
     );
   }
