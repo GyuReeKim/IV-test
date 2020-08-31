@@ -33,14 +33,14 @@ class Game extends Component {
             <img src={process.env.PUBLIC_URL + '/images/test2.jpg'} alt="test2" style={imageStyle} />
           </Grid>
         </Grid>
-        {/* <Grid container justify="center">
-          <Grid item xs={6}>
+        <Grid container justify="center">
+          <Grid item style={itemStyle}>
             <img src={process.env.PUBLIC_URL + '/images/test.png'} alt="test" style={imageStyle} />
           </Grid>
-          <Grid item xs={6}>
-            <img src={process.env.PUBLIC_URL + '/images/test.png'} alt="test" style={imageStyle} />
+          <Grid item style={itemStyle}>
+            <img src={process.env.PUBLIC_URL + '/images/test2.jpg'} alt="test2" style={imageStyle} />
           </Grid>
-        </Grid> */}
+        </Grid>
       </div>
     );
   }
