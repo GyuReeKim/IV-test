@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
 import Start from '../components/Start';
+import Map1 from '../components/Map1';
 
 const Game = () => {
   const containerStyle = {
     textAlign: 'center',
     width: '100vw'
-  };
-
-  const test = '/images/test3.jpg'
-
-  const backgroundImage1 = {
-    backgroundImage: `url(${process.env.PUBLIC_URL + test})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
   };
 
   const [mapSelection, setMapSelection] = useState(0);
@@ -22,10 +14,7 @@ const Game = () => {
     return (
       <div style={containerStyle}>
         <h1>시작페이지</h1>
-        <div style={backgroundImage1}>          
-          <p>이미지</p>
-          <p>{mapSelection}</p>
-        </div>
+        <Map1 />
       </div>
     );
   } else if (mapSelection === 2) {
