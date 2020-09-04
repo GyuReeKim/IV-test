@@ -1,11 +1,15 @@
 import React from 'react';
 
 const AnswerForm1 = props => {
+  const nextQuestion = () => {
+    props.setQuestionNumber(questionNumber => questionNumber+1)
+  };
+
   return (
     <div>
-      <p>{props.answer1}</p>
-      <p>{props.answer2}</p>
-      <p>{props.answer3}</p>
+      <p onClick={nextQuestion}>{props.answer1}</p>
+      <p onClick={nextQuestion}>{props.answer2}</p>
+      <p onClick={nextQuestion}>{props.answer3}</p>
     </div>
   );
 }

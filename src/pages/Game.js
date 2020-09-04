@@ -14,6 +14,7 @@ const Game = () => {
     return (
       <div style={containerStyle}>
         <h1>시작페이지</h1>
+        <h2>맵1</h2>
         <Map1 />
       </div>
     );
