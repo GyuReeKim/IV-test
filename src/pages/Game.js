@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Start from '../components/Start';
-import Map1 from '../components/Map1';
+import Start from '../components/main/Start';
+import Map1 from '../components/map1/Map1';
 
 const Game = () => {
   const containerStyle = {

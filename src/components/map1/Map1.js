@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Question1 from './Question1';
-import Question2 from './Question2';
+import Question1 from './questions/Question1';
+import Question2 from './questions/Question2';
 
 const Map1 = () => {
   const [questionNumber, setQuestionNumber] = useState(1);

@@ -1,5 +1,5 @@
 import React from 'react';
-import AnswerForm1 from './AnswerForm1';
+import AnswerForm1 from '../../forms/AnswerForm1';
 
 const Question1 = props => {
   const test = '/images/test3.jpg';
