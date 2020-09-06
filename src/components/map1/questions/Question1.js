@@ -15,7 +15,6 @@ const Question1 = props => {
 
   const answer1 = "1";
   const answer2 = "2";
-  const answer3 = "3";
 
   return (
     <div style={backgroundImage}>
@@ -23,7 +22,6 @@ const Question1 = props => {
       <AnswerForm1
         answer1={answer1}
         answer2={answer2}
-        answer3={answer3}
         questionNumber={props.questionNumber}
         setQuestionNumber={props.setQuestionNumber}
       />

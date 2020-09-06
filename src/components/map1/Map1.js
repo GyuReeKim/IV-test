@@ -17,9 +17,12 @@ const Map1 = () => {
   } else if (questionNumber === 2) {
     return (
       <div>
-        <Question2 />
+        <Question2
+          questionNumber={questionNumber}
+          setQuestionNumber={setQuestionNumber}
+        />
       </div>
-    )
+    );
   }
 }
 
