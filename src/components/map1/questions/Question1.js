@@ -15,6 +15,15 @@ const Question1 = props => {
 
   const answer1 = "1";
   const answer2 = "2";
+  
+  const setAnswer = (n) => {
+    if (n === 1) {
+      props.setCharacter1(c => c+10)
+      props.setCharacter2(c => c+10)
+    } else {
+      props.setCharacter3(c => c+10)
+    }
+  };
 
   return (
     <div style={backgroundImage}>
@@ -22,8 +31,8 @@ const Question1 = props => {
       <AnswerForm1
         answer1={answer1}
         answer2={answer2}
-        questionNumber={props.questionNumber}
         setQuestionNumber={props.setQuestionNumber}
+        setAnswer={setAnswer}
       />
     </div>
   );

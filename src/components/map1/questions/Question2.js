@@ -17,6 +17,18 @@ const Question2 = props => {
   const answer2 = "2";
   const answer3 = "3";
 
+  const setAnswer = (n) => {
+    if (n === 1) {
+      props.setCharacter1(c => c+10)
+    } else if (n === 2) {
+      props.setCharacter2(c => c+10)
+    } else {
+      props.setCharacter3(c => c+10)
+    }
+    // 모든 질문에 답 했을 경우
+    props.setMapSelection(5)
+  };
+
   return (
     <div style={backgroundImage}>
       <h3>질문</h3>
@@ -24,8 +36,8 @@ const Question2 = props => {
         answer1={answer1}
         answer2={answer2}
         answer3={answer3}
-        questionNumber={props.questionNumber}
         setQuestionNumber={props.setQuestionNumber}
+        setAnswer={setAnswer}
       />
     </div>
   );

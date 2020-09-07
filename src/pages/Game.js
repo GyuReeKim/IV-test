@@ -10,12 +10,36 @@ const Game = () => {
 
   const [mapSelection, setMapSelection] = useState(0);
 
-  if (mapSelection === 1) {
+  const [character, setCharacter] = useState([]);
+  
+  const [character1, setCharacter1] = useState(0);
+  const [character2, setCharacter2] = useState(0);
+  const [character3, setCharacter3] = useState(0);
+
+  if (mapSelection === 0) {
+    return (
+      <div style={containerStyle}>
+        <h1>시작페이지</h1>
+        <p>이미지</p>
+        <p>{mapSelection}</p>
+        <Start
+          setMapSelection={setMapSelection}
+        />
+      </div>
+    );
+  } else if (mapSelection === 1) {
     return (
       <div style={containerStyle}>
         <h1>시작페이지</h1>
         <h2>맵1</h2>
-        <Map1 />
+        {character1} / {character2} / {character3}
+        <Map1
+          setCharacter={setCharacter}
+          setMapSelection={setMapSelection}
+          setCharacter1={setCharacter1}
+          setCharacter2={setCharacter2}
+          setCharacter3={setCharacter3}
+        />
       </div>
     );
   } else if (mapSelection === 2) {
@@ -46,12 +70,10 @@ const Game = () => {
     return (
       <div style={containerStyle}>
         <h1>시작페이지</h1>
-        <p>이미지</p>
+        {character1} / {character2} / {character3}
+        <p>{character}</p>
         <p>{mapSelection}</p>
-        <Start
-          mapSelection={mapSelection}
-          setMapSelection={setMapSelection}
-        />
+        <p>결과보기</p>
       </div>
     );
   }
