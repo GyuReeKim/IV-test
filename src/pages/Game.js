@@ -16,6 +16,10 @@ const Game = () => {
   const [character2, setCharacter2] = useState(0);
   const [character3, setCharacter3] = useState(0);
 
+  const result = () => {
+    console.log('result')
+  };
+
   if (mapSelection === 0) {
     return (
       <div style={containerStyle}>
@@ -73,7 +77,7 @@ const Game = () => {
         {character1} / {character2} / {character3}
         <p>{character}</p>
         <p>{mapSelection}</p>
-        <p>결과보기</p>
+        <p onClick={result}>결과보기</p>
       </div>
     );
   }
