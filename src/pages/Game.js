@@ -18,6 +18,27 @@ const Game = () => {
 
   const result = () => {
     console.log('result')
+    const scores = {
+      'character1': character1,
+      'character2': character2,
+      'character3': character3,
+    }
+
+    let maxV = 0
+    for (let value of Object.values(scores)) {
+      if (value > maxV) {
+        maxV = value
+      }
+    }
+    
+    const characters = []
+
+    for (let [key, value] of Object.entries(scores)) {
+      if (value === maxV) {
+        characters.push(key)
+      }
+    }
+    console.log(characters)
   };
 
   if (mapSelection === 0) {
