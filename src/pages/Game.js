@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Start from '../components/main/Start';
 import Map1 from '../components/map1/Map1';
 
-const Game = () => {
+const Game = ({ history }) => {
   const containerStyle = {
     textAlign: 'center',
     width: '100vw'
@@ -39,6 +39,10 @@ const Game = () => {
       }
     }
     console.log(characters)
+
+    // route
+    const test = '1';
+    history.push(`/result/${test}`);
   };
 
   if (mapSelection === 0) {
